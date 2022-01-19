@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom Property</title>
+    <style>
+        :root{
+            --side-width: 200px;
+            --dark-border: 2px solid blue;
+            --main-color:orange;
+            --border-color:slateblue;
+            --background-color:black;
+        }
+        h1{
+            color: var(--main-color)
+        }
+        p{
+            color: var(--main-color)
+        }
+        h2{
+            border: 2px solid  var(--border-color);
+            color: var(--main-color)
+        }
+        footer{
+            color: var(--main-color);
+            border: var(--dark-border);
+            clear: both;
+        }
+        h6{
+            color: red;
+            background-color: var(--background-color);
+        }
+        .side-nav,
+        .blogs{
+            float: left;
+            height: 500px;
+            
+        }
+        .side-nav{
+            background-color: springgreen;
+            width: var(--side-width);
+        }
+        .blogs{
+            background-color: tomato;
+            width: calc(100% - 2*var(--side-width));
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>I am exploring custom properties</h1>
+        <p>welcome to my custom website</p>
+    </header>
+    <main>
+        <h2>my awesome content</h2>
+        <h6>my tiny heading</h6>
+        <section>
+            <aside class="side-nav">
+                My side navigation
+            </aside>
+            <div class="blogs">
+                <h4>blogs</h4>
+            </div>
+        </section>
+
+    </main>
+    <footer>
+        <p><small>copyright</small></p>
+    </footer>
+</body>
+</html>
